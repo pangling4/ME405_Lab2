@@ -27,7 +27,10 @@ var NAVTREE =
   [ "ME 405: Lab 2", "index.html", [
     [ "Lab 2: Control Freaks", "index.html", [
       [ "Introduction", "index.html#intro_sec", null ],
-      [ "Motor Control", "index.html#ss_Motor", null ]
+      [ "Serial Interaction", "index.html#ss_serial", null ],
+      [ "Controlling Small DC Motors", "index.html#ss_Kp", null ],
+      [ "Controlling a Motor attached to a Flywheel", "index.html#ss_Flywheel", null ],
+      [ "References", "index.html#ss_ref", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]

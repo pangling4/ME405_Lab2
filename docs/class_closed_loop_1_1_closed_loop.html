@@ -68,22 +68,22 @@ $(document).ready(function(){initNavTree('class_closed_loop_1_1_closed_loop.html
 </div><!--header-->
 <div class="contents">
 
-<p>This class implements a closed loop controller.  
+<p>This class implements a closed loop proportional controller.  
  <a href="class_closed_loop_1_1_closed_loop.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aac390fbdf46fc09e2aa29eda413c2f77"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_closed_loop_1_1_closed_loop.html#aac390fbdf46fc09e2aa29eda413c2f77">__init__</a> (self, kp, setpoint)</td></tr>
-<tr class="memdesc:aac390fbdf46fc09e2aa29eda413c2f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an encoder driver object.  <a href="class_closed_loop_1_1_closed_loop.html#aac390fbdf46fc09e2aa29eda413c2f77">More...</a><br /></td></tr>
+<tr class="memdesc:aac390fbdf46fc09e2aa29eda413c2f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_closed_loop_1_1_closed_loop.html" title="This class implements a closed loop proportional controller.">ClosedLoop</a> Controller object.  <a href="class_closed_loop_1_1_closed_loop.html#aac390fbdf46fc09e2aa29eda413c2f77">More...</a><br /></td></tr>
 <tr class="separator:aac390fbdf46fc09e2aa29eda413c2f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd403bf1ef8a4843e2f77fb1662ef85b"><td class="memItemLeft" align="right" valign="top"><a id="afd403bf1ef8a4843e2f77fb1662ef85b" name="afd403bf1ef8a4843e2f77fb1662ef85b"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (self, measured)</td></tr>
+<tr class="memitem:afd403bf1ef8a4843e2f77fb1662ef85b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_closed_loop_1_1_closed_loop.html#afd403bf1ef8a4843e2f77fb1662ef85b">update</a> (self, measured)</td></tr>
+<tr class="memdesc:afd403bf1ef8a4843e2f77fb1662ef85b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the control signal based on the current error.  <a href="class_closed_loop_1_1_closed_loop.html#afd403bf1ef8a4843e2f77fb1662ef85b">More...</a><br /></td></tr>
 <tr class="separator:afd403bf1ef8a4843e2f77fb1662ef85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3089a98185f72a20b30a9c93dd076630"><td class="memItemLeft" align="right" valign="top"><a id="a3089a98185f72a20b30a9c93dd076630" name="a3089a98185f72a20b30a9c93dd076630"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>change_setpoint</b> (self, setpoint)</td></tr>
+<tr class="memitem:a3089a98185f72a20b30a9c93dd076630"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_closed_loop_1_1_closed_loop.html#a3089a98185f72a20b30a9c93dd076630">change_setpoint</a> (self, setpoint)</td></tr>
+<tr class="memdesc:a3089a98185f72a20b30a9c93dd076630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the setpoint of the controller.  <a href="class_closed_loop_1_1_closed_loop.html#a3089a98185f72a20b30a9c93dd076630">More...</a><br /></td></tr>
 <tr class="separator:a3089a98185f72a20b30a9c93dd076630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a041a0611599ee9f491098f35e19b1e37"><td class="memItemLeft" align="right" valign="top"><a id="a041a0611599ee9f491098f35e19b1e37" name="a041a0611599ee9f491098f35e19b1e37"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>change_kp</b> (self, kp)</td></tr>
+<tr class="memitem:a041a0611599ee9f491098f35e19b1e37"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_closed_loop_1_1_closed_loop.html#a041a0611599ee9f491098f35e19b1e37">change_kp</a> (self, kp)</td></tr>
+<tr class="memdesc:a041a0611599ee9f491098f35e19b1e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the proportional gain value of the controller.  <a href="class_closed_loop_1_1_closed_loop.html#a041a0611599ee9f491098f35e19b1e37">More...</a><br /></td></tr>
 <tr class="separator:a041a0611599ee9f491098f35e19b1e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -96,7 +96,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aef508eb118fb231035fab4e419c17856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >This class implements a closed loop controller. </p>
+<div class="textblock"><p >This class implements a closed loop proportional controller. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aac390fbdf46fc09e2aa29eda413c2f77" name="aac390fbdf46fc09e2aa29eda413c2f77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac390fbdf46fc09e2aa29eda413c2f77">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -130,12 +130,120 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an encoder driver object. </p>
-<p >Creates an encoder driver by initializing timers and channels with given pins and timer number </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a <a class="el" href="class_closed_loop_1_1_closed_loop.html" title="This class implements a closed loop proportional controller.">ClosedLoop</a> Controller object. </p>
+<p >Creates a <a class="el" href="class_closed_loop_1_1_closed_loop.html" title="This class implements a closed loop proportional controller.">ClosedLoop</a> Controller object with the given proportional control gain and reference value </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in1pin</td><td>A pyb.Pin object corresponding to the encoder channel A </td></tr>
-    <tr><td class="paramname">in2pin</td><td>A pyb.Pin object corresponding to the encoder channel B </td></tr>
-    <tr><td class="paramname">timer</td><td>The timer number corresponding to the encoder pins </td></tr>
+    <tr><td class="paramname">kp</td><td>Controller proportional gain in [% duty cycle/rad] </td></tr>
+    <tr><td class="paramname">setpoint</td><td>Reference value in rad for the system </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a041a0611599ee9f491098f35e19b1e37" name="a041a0611599ee9f491098f35e19b1e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a041a0611599ee9f491098f35e19b1e37">&#9670;&nbsp;</a></span>change_kp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ClosedLoop.ClosedLoop.change_kp </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>kp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the proportional gain value of the controller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kp</td><td>The new proportional gain for the controller [% duty cycle/rad] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3089a98185f72a20b30a9c93dd076630" name="a3089a98185f72a20b30a9c93dd076630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3089a98185f72a20b30a9c93dd076630">&#9670;&nbsp;</a></span>change_setpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ClosedLoop.ClosedLoop.change_setpoint </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>setpoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the setpoint of the controller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">setpoint</td><td>The new setpoint for the controller [rad] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afd403bf1ef8a4843e2f77fb1662ef85b" name="afd403bf1ef8a4843e2f77fb1662ef85b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd403bf1ef8a4843e2f77fb1662ef85b">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ClosedLoop.ClosedLoop.update </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>measured</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the control signal based on the current error. </p>
+<p >Implements proportional control and returns the proportional gain times the error (setpoint - actual position) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">measured</td><td>The current position of the system [rad] to compare to the setpoint </td></tr>
   </table>
   </dd>
 </dl>
