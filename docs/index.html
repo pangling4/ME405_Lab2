@@ -66,7 +66,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
 Introduction</h1>
 <p >In the words of Master Yoda, "Control, control, you must learn control". </p><div class="image">
-<img src="yoda.JPG" alt=""/>
+<img src="yoda.png" alt=""/>
 <div class="caption">
 Figure 1: The greatest Jedi who ever existed, Master Yoda [1]</div></div>
 <p> Speaking of control, this lab assignment involved applying positional control to a DC motor. We used a closed loop Kp controller in order to adjust the position of the motor. Closed loop control is necessary to find an acceptable speed at which to run the motor at without causing overshoot and steady state error. A step response is a good indicator of these faults within a controller. Multiple step responses of the motor running at different Kp values are shown within this lab assignment. The Kp value is a gain. The actuation signal which controls the motor position is found by multiplying the Kp value by the setpoint position minus the measured position. This is shown in the block diagram in Figure 2. A larger Kp value amplifies the actuation signal, which means that the motor will reach the specified setpoint position at a faster rate. The setpoint is 2 times pi radians, which is a full revolution of the motor </p><div class="image">
@@ -105,7 +105,7 @@ Figure 7: Kp = 200</div></div>
  <h1><a class="anchor" id="ss_Flywheel"></a>
 Controlling a Motor attached to a Flywheel</h1>
 <p >A flywheel adds additional inertia to the motor. This increases the amount of effort that the motor must spin. This flywheel is shown below in Figure 8. </p><div class="image">
-<img src="flywheel.JPG" alt=""/>
+<img src="flywheel.png" alt=""/>
 <div class="caption">
 Figure 8: Motor attached to flywheel</div></div>
 <p> The step response plots with this added inertia are shown below. </p><div class="image">
