@@ -3,7 +3,7 @@
 # @mainpage Lab 2: Control Freaks
 # @section intro_sec Introduction
 # In the words of Master Yoda, "Control, control, you must learn control". 
-# @image html Morro_bay.JPG Figure 1: The greatest Jedi who ever existed, Master Yoda [1]
+# @image html Morro_bay.jpg Figure 1: The greatest Jedi who ever existed, Master Yoda [1]
 # Speaking of control, this lab assignment involved applying positional control
 # to a DC motor. We used a closed loop Kp controller in order to adjust the 
 # position of the motor. Closed loop control is necessary to find an acceptable
