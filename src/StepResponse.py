@@ -19,7 +19,7 @@ timeList = []
 positionList = []
 
 # open serial communication
-with serial.Serial ('COM5', 115200, timeout = 1) as s_port:
+with serial.Serial ('COM3', 115200, timeout = 1) as s_port:
     
     # prompts user for Kp, and codes string into a byte
     kp = bytes(input("Input integer proportional gain value: "), 'utf-8')
@@ -32,6 +32,7 @@ with serial.Serial ('COM5', 115200, timeout = 1) as s_port:
     
     # need to read first line in advance because that's where the kp input is
     s_port.readline()
+    
     
     # infinite loop 
     while True:
@@ -53,7 +54,8 @@ print("Data Collection Complete")
 # PLOTTING
 fig, plt = pp.subplots()
 plt.plot(timeList, positionList)
-plt.set(xlabel = "Time, ms", ylabel = "Position, rad")
+plt.set(xlabel = "Time [ms]", ylabel = "Position [rad]")
+plt.set(title = "Flywheel Position, Kp="+ str(kp.decode()))
 
 # set y limits of plot in radians
 plt.set_ylim(0,7)

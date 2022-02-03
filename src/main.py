@@ -41,6 +41,7 @@ try:
         encoder1.zero()
         start = utime.ticks_ms()
         time = utime.ticks_ms()
+        timeData = []
         data = []
         motor1.enable()
         
@@ -51,10 +52,15 @@ try:
             if utime.ticks_ms() > (time + period):
                 motor1.set_duty_cycle(control1.update(pos))
                 time += period
-                print(time - start, pos)
+                timeData.append(time-start)
+                data.append(pos)
+                #print(time - start, pos)
                 if time - start > 600:
                     motor1.disable()
                     break
+        
+        for x in range(0, len(timeData)):
+            print(timeData[x], data[x])
     
 # create try and except to handle Ctr-C 
 except KeyboardInterrupt:
