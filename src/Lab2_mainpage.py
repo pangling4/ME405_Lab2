@@ -2,7 +2,7 @@
 # @author Jonathan Cedarquist, Tim Jain, Philip Pang
 # @mainpage Lab 2: Control Freaks
 # @section intro_sec Introduction
-# In the words of Master Yoda, "Control, control, you must learn control". 
+# In the words of Master Yoda, "Control, control, you must learn control" 
 # @image html block_diagram.JPG Figure 1: The greatest Jedi who ever existed, Master Yoda [1]
 # Speaking of control, this lab assignment involved applying positional control
 # to a DC motor. We used a closed loop Kp controller in order to adjust the 
@@ -49,7 +49,7 @@
 # @image html kp_200.png Figure 7: Kp = 200
 # @section ss_Flywheel Controlling a Motor attached to a Flywheel
 # A flywheel adds additional inertia to the motor. This increases the amount of 
-# effort that the motor must spin. This flywheel is shown below in Figure 8.
+# effort that the motor must spin. This flywheel is shown below in Figure 8
 # @image html flywheel.JPG Figure 8: Motor attached to flywheel
 # The step response plots with this added inertia are shown below. 
 # @image html Flywheel_Kp_10.png Figure 9: Kp = 10
