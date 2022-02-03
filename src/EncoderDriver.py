@@ -28,8 +28,8 @@ class EncoderDriver:
         
         # Create timer and timer channels in encoder mode
         self.timer = pyb.Timer(timer, prescaler = 0, period = 65535)
-        self.ch1 = self.timer.channel(1, pyb.Timer.ENC_AB, pin = in1pin)
-        self.ch2 = self.timer.channel(2, pyb.Timer.ENC_AB, pin = in2pin)
+        self.ch1 = self.timer.channel(1, pyb.Timer.ENC_A, pin = in1pin)
+        self.ch2 = self.timer.channel(2, pyb.Timer.ENC_B, pin = in2pin)
         
         # Stores current encoder position in radians
         self.current_position = 0
@@ -66,7 +66,7 @@ class EncoderDriver:
         gearRatio = 16
         CPR = 256
         
-        return self.current_position * 3.1415926535 / (gearRatio*CPR*2)
+        return self.current_position * 3.1415926535 / (gearRatio*CPR)
     
 
     def zero(self):
