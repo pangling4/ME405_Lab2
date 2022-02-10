@@ -32,7 +32,10 @@ with serial.Serial ('COM3', 115200, timeout = 1) as s_port:
     
     # need to read first line in advance because that's where the kp input is
     s_port.readline()
-    
+    s_port.readline()
+
+    while s_port.inWaiting() == 0:
+        pass
     
     # infinite loop 
     while True:
