@@ -22,15 +22,18 @@ positionList = []
 with serial.Serial ('COM3', 115200, timeout = 1) as s_port:
     
     # prompts user for Kp, and codes string into a byte
-    kp = bytes(input("Input integer proportional gain value: "), 'utf-8')
+    kp = bytes(input("Input float proportional gain value: "), 'utf-8')
+    ki = bytes(input("Input float integral gain value: "), 'utf-8')
     # writes user specified Kp to serial communication and "enters"
     s_port.write(kp + b'\r')
+    s_port.write(ki + b'\r')
 
     # motor choice functionality does not exist yet
     # motor = bytes(input("Specify which motor to run [1,2]: "), 'utf-8')
     # s_port.write(motor, b'\r')
     
     # need to read first line in advance because that's where the kp input is
+    s_port.readline()
     s_port.readline()
     s_port.readline()
 
@@ -61,7 +64,7 @@ plt.set(xlabel = "Time [ms]", ylabel = "Position [rad]")
 plt.set(title = "Flywheel Position, Kp="+ str(kp.decode()))
 
 # set y limits of plot in radians
-plt.set_ylim(0,7)
+#plt.set_ylim(0, 420)
 
 # display plot
 pp.show()

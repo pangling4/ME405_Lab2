@@ -14,49 +14,50 @@ import pyb
 import utime
 import math
 import ClosedLoop
-import EncoderDriver
-import MotorDriver
+import RoboEncoderDriver
+import RoboMotorDriver
 
 # Instantiates two motor driver objects with appropriate pins and timer number
-motor1 = MotorDriver.MotorDriver(pyb.Pin.board.PA10, pyb.Pin.board.PB4, pyb.Pin.board.PB5, 3)
-motor2 = MotorDriver.MotorDriver(pyb.Pin.board.PC1, pyb.Pin.board.PA0, pyb.Pin.board.PA1, 5)
+pinA6 = pyb.Pin(pyb.Pin.board.PA6, pyb.Pin.OUT_PP)
+pinA7 = pyb.Pin(pyb.Pin.board.PA7, pyb.Pin.OUT_PP)
+    
+motor2 = RoboMotorDriver.RoboMotorDriver(pinA6, pinA7, 3, 2)
 
 # Instantiates two encoder driver objects with appropriate pins and timer number
-encoder1 = EncoderDriver.EncoderDriver(pyb.Pin(pyb.Pin.cpu.B6), pyb.Pin(pyb.Pin.cpu.B7), 4)
-encoder2 = EncoderDriver.EncoderDriver(pyb.Pin(pyb.Pin.cpu.C6), pyb.Pin(pyb.Pin.cpu.C7), 8)
+encoder2 = RoboEncoderDriver.RoboEncoderDriver(pyb.Pin(pyb.Pin.board.PC6), pyb.Pin(pyb.Pin.board.PC7), 8)
+
 
 # Instantiates controller object to calculate desired motor effort/duty cycle
-control1 = ClosedLoop.ClosedLoop(100, math.pi*2)
-
-motor1.enable()
+control = ClosedLoop.ClosedLoop(0.5, 0, 180)
 
 # for data collection, set period between data calls
-period = 10 #ms
+period = 5 #ms
 data = []
 
 try:
     while True:
         
-        control1.change_kp(int(input("set Kp: ")))
-        encoder1.zero()
+        control.change_kp(float(input("set Kp: ")))
+        control.change_ki(float(input("set Ki: ")))
+        encoder2.zero()
+        control.reset_time()
         start = utime.ticks_ms()
         time = utime.ticks_ms()
         timeData = []
         data = []
-        motor1.enable()
         
         while True:
             # Step Response Test
-            encoder1.update()
-            pos = encoder1.read()
+            encoder2.update()
+            pos = encoder2.read()
             if utime.ticks_ms() > (time + period):
-                motor1.set_duty_cycle(control1.update(pos))
+                motor2.set_duty_cycle(control.update(pos))
                 time += period
                 timeData.append(time-start)
                 data.append(pos)
                 #print(time - start, pos)
-                if time - start > 600:
-                    motor1.disable()
+                if time - start > 700:
+                    motor2.set_duty_cycle(0)
                     break
         
         for x in range(0, len(timeData)):
@@ -64,6 +65,6 @@ try:
     
 # create try and except to handle Ctr-C 
 except KeyboardInterrupt:
-    motor1.disable()
+    motor2.set_duty_cycle(0)
     print("canceled")
 
