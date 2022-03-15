@@ -100,6 +100,7 @@ if __name__ == "__main__":
     # Enable motor 1 and 2
     motor1.enable()
     motor1.set_duty_cycle(50)
+    print("Positive dty cycle")
     motor2.enable()
     motor2.set_duty_cycle(50)
     # Stay at current state for 3 seconds
@@ -107,12 +108,14 @@ if __name__ == "__main__":
     
     # Flip motor direction
     motor1.set_duty_cycle(-50)
+    print("Negative duty cycle")
     motor2.set_duty_cycle(-50)
     # Stay at current state for 3 seconds
     utime.sleep(3)
     
     # Test invalid duty cycle
     motor1.set_duty_cycle(-150)
+    print("Max negative duty cycle")
     motor2.set_duty_cycle(-150)
     # Stay at current state for 3 seconds
     utime.sleep(3)
